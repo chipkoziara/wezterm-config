@@ -1,41 +1,36 @@
--- A slightly altered version of catppucchin mocha
-local mocha = {
-   rosewater = '#f5e0dc',
-   flamingo = '#f2cdcd',
-   pink = '#f5c2e7',
-   mauve = '#cba6f7',
-   red = '#f38ba8',
-   maroon = '#eba0ac',
-   peach = '#fab387',
-   yellow = '#f9e2af',
-   green = '#a6e3a1',
-   teal = '#94e2d5',
-   sky = '#89dceb',
-   sapphire = '#74c7ec',
-   blue = '#89b4fa',
-   lavender = '#b4befe',
-   text = '#cdd6f4',
-   subtext1 = '#bac2de',
-   subtext0 = '#a6adc8',
-   overlay2 = '#9399b2',
-   overlay1 = '#7f849c',
-   overlay0 = '#6c7086',
-   surface2 = '#585b70',
-   surface1 = '#45475a',
-   surface0 = '#313244',
-   base = '#1f1f28',
-   mantle = '#181825',
-   crust = '#11111b',
+local storm = { -- Tokyo Night Storm (Gogh)
+   color_01 = '#414868', -- Black (Host)
+   color_02 = '#F7768E', -- Red (Syntax string)
+   color_03 = '#9ECE6A', -- Green (Command)
+   color_04 = '#E0AF68', -- Yellow (Command second)
+   color_05 = '#7AA2F7', -- Blue (Path)
+   color_06 = '#BB9AF7', -- Magenta (Syntax var)
+   color_07 = '#7DCFFF', -- Cyan (Prompt)
+   color_08 = '#C0CAF5', -- White
+
+   color_09 = '#414868', -- Bright Black
+   color_10 = '#F7768E', -- Bright Red (Command error)
+   color_11 = '#9ECE6A', -- Bright Green (Exec)
+   color_12 = '#E0AF68', -- Bright Yellow
+   color_13 = '#7AA2F7', -- Bright Blue (Folder)
+   color_14 = '#BB9AF7', -- Bright Magenta
+   color_15 = '#7DCFFF', -- Bright Cyan
+   color_16 = '#C0CAF5', -- Bright White
+
+   background = '#24283B', -- Background
+   foreground = '#C0CAF5', -- Foreground (Text)
+
+   cursor = '#C0CAF5', -- Cursor
 }
 
 local colorscheme = {
-   foreground = mocha.text,
-   background = mocha.base,
-   cursor_bg = mocha.rosewater,
-   cursor_border = mocha.rosewater,
-   cursor_fg = mocha.crust,
-   selection_bg = mocha.surface2,
-   selection_fg = mocha.text,
+   foreground = storm.foreground,
+   background = storm.background,
+   cursor_bg = storm.cursor,
+   cursor_border = storm.cursor,
+   cursor_fg = storm.background,
+   selection_bg = storm.color_01,
+   selection_fg = storm.foreground,
    ansi = {
       '#0C0C0C', -- black
       '#C50F1F', -- red
@@ -59,35 +54,35 @@ local colorscheme = {
    tab_bar = {
       background = 'rgba(0, 0, 0, 0.4)',
       active_tab = {
-         bg_color = mocha.surface2,
-         fg_color = mocha.text,
+         bg_color = storm.color_01,
+         fg_color = storm.foreground,
       },
       inactive_tab = {
-         bg_color = mocha.surface0,
-         fg_color = mocha.subtext1,
+         bg_color = storm.color_09,
+         fg_color = storm.color_08,
       },
       inactive_tab_hover = {
-         bg_color = mocha.surface0,
-         fg_color = mocha.text,
+         bg_color = storm.color_09,
+         fg_color = storm.foreground,
       },
       new_tab = {
-         bg_color = mocha.base,
-         fg_color = mocha.text,
+         bg_color = storm.background,
+         fg_color = storm.foreground,
       },
       new_tab_hover = {
-         bg_color = mocha.mantle,
-         fg_color = mocha.text,
+         bg_color = storm.color_09,
+         fg_color = storm.foreground,
          italic = true,
       },
    },
-   visual_bell = mocha.surface0,
+   visual_bell = storm.color_09,
    indexed = {
-      [16] = mocha.peach,
-      [17] = mocha.rosewater,
+      [16] = storm.color_04,
+      [17] = storm.color_02,
    },
-   scrollbar_thumb = mocha.surface2,
-   split = mocha.overlay0,
-   compose_cursor = mocha.flamingo, -- nightbuild only
+   scrollbar_thumb = storm.color_01,
+   split = storm.color_09,
+   compose_cursor = storm.color_02,
 }
 
 return colorscheme
