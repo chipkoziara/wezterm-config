@@ -1,6 +1,6 @@
 local wezterm = require('wezterm')
 local umath = require('utils.math')
-local colors = require('colors.custom')
+local theme = require('colors.custom')
 
 local nf = wezterm.nerdfonts
 local M = {}
@@ -33,12 +33,12 @@ local charging_icons = {
 }
 
 local colors = {
-   date_fg = colors.active_tab.foreground,
-   date_bg = colors.tab_bar.background,
-   battery_fg = colors.active_tab.foreground,
-   battery_bg = colors.tab_bar.background,
-   separator_fg = colors.active_tab.foreground,
-   separator_bg = colors.tab_bar.background,
+   date_fg = theme.foreground,
+   date_bg = theme.tab_bar.background,
+   battery_fg = theme.foreground,
+   battery_bg = theme.tab_bar.background,
+   separator_fg = theme.foreground,
+   separator_bg = theme.tab_bar.background,
 }
 
 local __cells__ = {} -- wezterm FormatItems (ref: https://wezfurlong.org/wezterm/config/lua/wezterm/format.html)
